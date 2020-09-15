@@ -4,7 +4,6 @@ class Solution:
 
     def subsetSum(self, N, arr, sum):
         t =  [[0 for i in range(sum)] for j in range(N + 1)]
-        print(t)
         for i in range(N + 1):
             for j in range(sum + 1):
                 if i == 0:
@@ -16,7 +15,6 @@ class Solution:
                         t[i][j] = t[i - 1][j - (arr[i - 1])] or t[i - 1][j]
                     else:
                         t[i][j] = t[i - 1][j]
-                print(t)
                 return t[N][sum]
 
     def equalPartition(self, N, arr):
