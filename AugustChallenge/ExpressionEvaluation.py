@@ -15,7 +15,7 @@ class Solution():
             else:
                 present_number = (present_number * 10) + int(i)
 
-        stack.append(present_number)
+        output.append(present_number)
         while stack:
             output.append(stack.pop())
 
